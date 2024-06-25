@@ -47,11 +47,11 @@ if __name__ == "__main__":
 
     wav_file_path = download_audio(link)
     # vocal_file_path = separate_vocals(wav_file_path, output_dir)
-    vocal_file_path = demuscs_separate(wav_file_path)
+    demuscs_separate(wav_file_path)
     subprocess.run(['python', 'basic-pitch.py', vocal_file_path])
     
     
-    print(vocal_file_path)
+    # print(vocal_file_path)
 
     # Clean up the temporary files
     # os.remove(wav_file_path)
